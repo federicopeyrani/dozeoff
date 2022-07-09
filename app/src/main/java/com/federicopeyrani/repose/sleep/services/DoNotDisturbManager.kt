@@ -20,7 +20,11 @@ class DoNotDisturbManager @Inject constructor(
     val setDnd get() = ::setDndUnsafe.takeIf { isNotificationPolicyAccessGranted }
 
     private fun setDndUnsafe() {
-        val policy = Policy(Policy.PRIORITY_CATEGORY_ALARMS, 0, 0)
+        val policy = Policy(
+            /* priorityCategories = */ Policy.PRIORITY_CATEGORY_ALARMS,
+            /* priorityCallSenders = */ Policy.PRIORITY_SENDERS_ANY,
+            /* priorityMessageSenders = */ Policy.PRIORITY_SENDERS_ANY
+        )
         notificationManager.setInterruptionFilter(INTERRUPTION_FILTER_PRIORITY)
         notificationManager.notificationPolicy = policy
     }

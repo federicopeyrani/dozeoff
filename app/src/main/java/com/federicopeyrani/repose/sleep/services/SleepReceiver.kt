@@ -43,7 +43,7 @@ class SleepReceiver : BroadcastReceiver() {
         }
 
         if (sleepConfidence > CONFIDENCE_THRESHOLD) {
-            doNotDisturbManager.setDnd
+            doNotDisturbManager.setDnd?.invoke()
             Log.d(TAG, "onReceive: turning DND on")
         }
     }
