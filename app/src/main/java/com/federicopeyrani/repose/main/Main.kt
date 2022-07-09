@@ -123,7 +123,8 @@ fun MissingPermissionCard(
 
 @Composable
 fun MissingPermissionCardHeader(
-    title: String, modifier: Modifier = Modifier
+    title: String,
+    modifier: Modifier = Modifier
 ) {
     Row(
         modifier = modifier,
@@ -149,7 +150,8 @@ fun MissingPermissionCardHeader(
 
 @Composable
 fun MissingPermissionCardActions(
-    modifier: Modifier = Modifier, onGrantButtonClick: () -> Unit
+    modifier: Modifier = Modifier,
+    onGrantButtonClick: () -> Unit
 ) {
     Row(
         modifier = modifier,
@@ -159,7 +161,8 @@ fun MissingPermissionCardActions(
             colors = ButtonDefaults.buttonColors(
                 containerColor = MaterialTheme.colorScheme.error,
                 contentColor = MaterialTheme.colorScheme.onError
-            ), onClick = onGrantButtonClick
+            ),
+            onClick = onGrantButtonClick
         ) {
             Text(text = "Grant")
         }
@@ -168,7 +171,8 @@ fun MissingPermissionCardActions(
 
 @Composable
 fun SleepConfidenceCard(
-    sleepClassifyEntity: SleepClassifyEntity, modifier: Modifier
+    sleepClassifyEntity: SleepClassifyEntity,
+    modifier: Modifier
 ) {
     Card(
         modifier = modifier,
