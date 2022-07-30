@@ -1,6 +1,8 @@
 package com.federicopeyrani.dozeoff.sleep.services
 
 import android.app.PendingIntent
+import android.app.PendingIntent.FLAG_CANCEL_CURRENT
+import android.app.PendingIntent.FLAG_MUTABLE
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -54,8 +56,10 @@ class SleepReceiver : BroadcastReceiver() {
 
         private const val CONFIDENCE_THRESHOLD = 75
 
-        private val BROADCAST_FLAGS =
-            PendingIntent.FLAG_CANCEL_CURRENT or if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) PendingIntent.FLAG_MUTABLE else 0
+        private val BROADCAST_FLAGS = FLAG_CANCEL_CURRENT or when {
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> FLAG_MUTABLE
+            else -> 0
+        }
 
         fun createSleepReceiverPendingIntent(context: Context): PendingIntent {
             val sleepIntent = Intent(context, SleepReceiver::class.java)

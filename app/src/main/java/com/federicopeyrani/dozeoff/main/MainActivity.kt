@@ -101,4 +101,3 @@ class MainActivity : ComponentActivity() {
             Intent("android.settings.NOTIFICATION_POLICY_ACCESS_SETTINGS")
     }
 }
-

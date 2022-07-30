@@ -7,14 +7,11 @@ import androidx.room.Query
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-abstract class SleepEventDao {
+interface SleepEventDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    abstract suspend fun insertSleepClassifies(sleepSegments: List<SleepClassifyEntity>)
-
-    @Query("SELECT * FROM SleepClassifyEntity")
-    abstract fun getSleepClassifiesFlow(): Flow<List<SleepClassifyEntity>>
+    suspend fun insertSleepClassifies(sleepSegments: List<SleepClassifyEntity>)
 
     @Query("SELECT * FROM SleepClassifyEntity ORDER BY timestampMillis DESC")
-    abstract fun getLastSleepClassifyFlow(): Flow<SleepClassifyEntity?>
+    fun getLastSleepClassifyFlow(): Flow<SleepClassifyEntity?>
 }
