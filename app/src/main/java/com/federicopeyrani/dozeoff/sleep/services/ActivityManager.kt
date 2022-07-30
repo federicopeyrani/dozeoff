@@ -1,4 +1,4 @@
-package com.federicopeyrani.repose.sleep.services
+package com.federicopeyrani.dozeoff.sleep.services
 
 import android.Manifest.permission.ACTIVITY_RECOGNITION
 import android.annotation.SuppressLint

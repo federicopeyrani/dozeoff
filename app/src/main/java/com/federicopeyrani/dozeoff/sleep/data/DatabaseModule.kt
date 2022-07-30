@@ -1,4 +1,4 @@
-package com.federicopeyrani.repose.sleep.data
+package com.federicopeyrani.dozeoff.sleep.data
 
 import android.content.Context
 import androidx.room.Room

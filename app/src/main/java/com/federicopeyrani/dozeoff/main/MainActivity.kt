@@ -1,4 +1,4 @@
-package com.federicopeyrani.repose.main
+package com.federicopeyrani.dozeoff.main
 
 import android.Manifest.permission.ACTIVITY_RECOGNITION
 import android.content.Intent
@@ -11,11 +11,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.federicopeyrani.repose.main.MainViewModel.PermissionStatus.Denied
-import com.federicopeyrani.repose.main.MainViewModel.PermissionStatus.Granted
-import com.federicopeyrani.repose.sleep.services.ActivityManager
-import com.federicopeyrani.repose.sleep.services.DoNotDisturbManager
-import com.federicopeyrani.repose.ui.theme.ReposeTheme
+import com.federicopeyrani.dozeoff.main.MainViewModel.PermissionStatus.Denied
+import com.federicopeyrani.dozeoff.main.MainViewModel.PermissionStatus.Granted
+import com.federicopeyrani.dozeoff.sleep.services.ActivityManager
+import com.federicopeyrani.dozeoff.sleep.services.DoNotDisturbManager
+import com.federicopeyrani.dozeoff.ui.theme.DozeOffTheme
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -75,7 +75,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            ReposeTheme {
+            DozeOffTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.surface
                 ) {

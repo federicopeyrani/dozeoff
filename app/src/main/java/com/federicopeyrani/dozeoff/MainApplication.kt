@@ -1,4 +1,4 @@
-package com.federicopeyrani.repose
+package com.federicopeyrani.dozeoff
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

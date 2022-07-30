@@ -1,4 +1,4 @@
-package com.federicopeyrani.repose.ui.theme
+package com.federicopeyrani.dozeoff.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -28,7 +28,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun ReposeTheme(
+fun DozeOffTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit

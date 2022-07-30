@@ -1,4 +1,4 @@
-package com.federicopeyrani.repose.sleep.services
+package com.federicopeyrani.dozeoff.sleep.services
 
 import android.app.PendingIntent
 import android.content.BroadcastReceiver
@@ -6,8 +6,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.util.Log
-import com.federicopeyrani.repose.sleep.SleepRepository
-import com.federicopeyrani.repose.sleep.data.SleepClassifyEntity
+import com.federicopeyrani.dozeoff.sleep.SleepRepository
+import com.federicopeyrani.dozeoff.sleep.data.SleepClassifyEntity
 import com.google.android.gms.location.SleepClassifyEvent
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.MainScope

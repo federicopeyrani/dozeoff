@@ -1,12 +1,12 @@
-package com.federicopeyrani.repose.main
+package com.federicopeyrani.dozeoff.main
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.federicopeyrani.repose.main.MainViewModel.PermissionStatus.NotChecked
-import com.federicopeyrani.repose.sleep.SleepRepository
+import com.federicopeyrani.dozeoff.main.MainViewModel.PermissionStatus.NotChecked
+import com.federicopeyrani.dozeoff.sleep.SleepRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.stateIn
