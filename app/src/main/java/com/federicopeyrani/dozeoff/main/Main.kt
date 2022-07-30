@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.federicopeyrani.repose.main
+package com.federicopeyrani.dozeoff.main
 
 import android.icu.text.SimpleDateFormat
 import androidx.compose.foundation.layout.Arrangement
@@ -32,8 +32,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.federicopeyrani.repose.main.MainViewModel.PermissionStatus.Denied
-import com.federicopeyrani.repose.sleep.data.SleepClassifyEntity
+import com.federicopeyrani.dozeoff.main.MainViewModel.PermissionStatus.Denied
+import com.federicopeyrani.dozeoff.sleep.data.SleepClassifyEntity
 import java.util.Date
 
 @Composable

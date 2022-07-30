@@ -1,4 +1,4 @@
-package com.federicopeyrani.repose.ui.theme
+package com.federicopeyrani.dozeoff.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

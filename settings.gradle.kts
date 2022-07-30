@@ -14,6 +14,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Repose"
+rootProject.name = "DozeOff"
 
 include(":app")

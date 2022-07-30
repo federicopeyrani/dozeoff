@@ -1,4 +1,4 @@
-package com.federicopeyrani.repose.sleep.services
+package com.federicopeyrani.dozeoff.sleep.services
 
 import android.app.NotificationManager
 import android.app.NotificationManager.INTERRUPTION_FILTER_PRIORITY

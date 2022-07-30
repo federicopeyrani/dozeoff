@@ -1,7 +1,7 @@
-package com.federicopeyrani.repose.sleep
+package com.federicopeyrani.dozeoff.sleep
 
-import com.federicopeyrani.repose.sleep.data.SleepClassifyEntity
-import com.federicopeyrani.repose.sleep.data.SleepEventDao
+import com.federicopeyrani.dozeoff.sleep.data.SleepClassifyEntity
+import com.federicopeyrani.dozeoff.sleep.data.SleepEventDao
 import javax.inject.Inject
 import javax.inject.Singleton
 
