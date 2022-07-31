@@ -15,6 +15,7 @@ plugins {
     id("com.android.library") version "7.2.0-rc02" apply false
     id("org.jetbrains.kotlin.android") version "1.6.21" apply false
     id("io.gitlab.arturbosch.detekt") version "1.21.0-RC2"
+    id("com.google.protobuf") version "0.8.17" apply false
 }
 
 subprojects {

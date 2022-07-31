@@ -1,8 +1,15 @@
+import com.google.protobuf.gradle.generateProtoTasks
+import com.google.protobuf.gradle.plugins
+import com.google.protobuf.gradle.protobuf
+import com.google.protobuf.gradle.protoc
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     kotlin("kapt")
     id("dagger.hilt.android.plugin")
+    id("com.google.protobuf")
 }
 
 val composeVersion = "1.2.0-beta03"
@@ -84,4 +91,29 @@ dependencies {
     implementation("androidx.room:room-runtime:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
     kapt("androidx.room:room-compiler:$roomVersion")
+
+    // Proto DataStore
+    implementation("androidx.datastore:datastore:1.0.0")
+    implementation("com.google.protobuf:protobuf-kotlin:3.21.4")
+}
+
+tasks.withType<KotlinCompile>().all {
+    kotlinOptions {
+        freeCompilerArgs = listOf("-opt-in=kotlin.RequiresOptIn")
+    }
+}
+
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.21.4"
+    }
+
+    generateProtoTasks {
+        all().forEach { task ->
+            task.plugins {
+                create("kotlin")
+                create("java")
+            }
+        }
+    }
 }
