@@ -93,8 +93,8 @@ dependencies {
     kapt("androidx.room:room-compiler:$roomVersion")
 
     // Proto DataStore
-    implementation("androidx.datastore:datastore:1.0.0")
-    implementation("com.google.protobuf:protobuf-kotlin:3.21.4")
+    implementation(Deps.dataStore)
+    implementation(Deps.Protobuf.kotlin)
 }
 
 tasks.withType<KotlinCompile>().all {
@@ -105,7 +105,7 @@ tasks.withType<KotlinCompile>().all {
 
 protobuf {
     protoc {
-        artifact = "com.google.protobuf:protoc:3.21.4"
+        artifact = Deps.Protobuf.protoc
     }
 
     generateProtoTasks {
